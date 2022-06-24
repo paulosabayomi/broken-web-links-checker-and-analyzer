@@ -17,5 +17,5 @@ function
 the `--with-sitemap` flag doesn't have to come before the url, it can also come after it   
    
 you can also call the python file with a custom name like npm, git, composer and so on, you can watch my yt video on how to do it, link below   
-[https://youtu.be/3VOtRaopsIQ]
+[How to run python file with custom name like npm on Windows and Linux](https://youtu.be/3VOtRaopsIQ)
 
