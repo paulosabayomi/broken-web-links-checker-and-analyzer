@@ -4,6 +4,19 @@ or all webpages of a website
    
 it also has the support of using XML sitemap of a website to check for the broken links and analyze links in all webpages of the website   
    
+## Dependencies   
+`requests` and `BeautifulSoup4`   
+
+### How to install `requests`   
+```
+pip install requests
+```cmd  
+   
+### How to install `BeautifulSoup4`   
+```
+pip install beautifulsoup4
+```cmd   
+   
 ## How to run   
 it works through the command line and you pass data to it through the python sys module using `sys.argv` the you pass the data from `sys.argv` to the `main()`   
 function   
