@@ -1,21 +1,29 @@
 #! python3
 
+# Broken links checker and analyzer
+# written in Python
+# Author: Amusa Abayomi
+# Github: Amusa-Paulos
+# Twitter: @paulos_ab
+
 import requests, os, re, random
 from bs4 import BeautifulSoup
 
 def run(url, sitemap=False):
-    os.chdir("C:\\Users\\amusa\\Documents\\helper-program")
+    os.chdir(os.getcwd())
+    log_file_name = "report-logs"
     rm_trailing_slash = re.compile(r'\/$').sub('', url)
     rm_trailing_slash = "http://" + rm_trailing_slash if not re.compile(r'^http').search(rm_trailing_slash) else url
     print(f"Paulos Ab: {f'getting {rm_trailing_slash}...'.rjust(12)}")
     req = requests.get(rm_trailing_slash)
     domain_main_name = re.compile(r'(www\.)?([a-zA-Z0-9]+)\.\w{3,9}').search(rm_trailing_slash).groups()[1].capitalize()
-    # return print("domain_main_name: ", domain_main_name[1])
+    
+    os.makedirs(os.path.join(os.getcwd(), log_file_name), exist_ok=True)
     if sitemap:
-        os.makedirs(f"{os.path.join('log', domain_main_name)}", exist_ok=True)
-        general_file = open(f"{os.path.join(os.path.join('log', domain_main_name), domain_main_name + '_website_deep_scan.txt')}", "a")
+        os.makedirs(f"{os.path.join('report-logs', domain_main_name)}", exist_ok=True)
+        general_file = open(f"{os.path.join(os.path.join(log_file_name, domain_main_name), domain_main_name + '_website_deep_scan.txt')}", "a")
 
-    # return print(general_file)
+    
     domain_name = re.compile(r"(http(s)?\:\/\/)?(www\.)?[a-zA-Z0-9]+\.\w{3,9}(\.\w{2,3})?(\/)?").search(rm_trailing_slash).group()
     domain_name = domain_name + '/' if not re.compile(r'\/$').search(domain_name) else domain_name
     if req.status_code == 404:
@@ -96,7 +104,7 @@ def run(url, sitemap=False):
                     load_too_long_links_arr.append(url_to_check + " ::: reason :::}> " + f"Connection to {url_to_check} timed out. (connect timeout={25})")
 
         analytics_file_title = str(random.randint(1, 9999999)) if soup.title is None else soup.title.text
-        log_directory = f"{os.getcwd()}/{os.path.join('log', domain_main_name if sitemap else '')}"
+        log_directory = f"{os.getcwd()}/{os.path.join(log_file_name, domain_main_name if sitemap else '')}"
         analytics_log_file_location = f"{os.path.join(log_directory, ''.join(e for e in analytics_file_title if e.isalnum()))}_webpage_links_analysis.txt"
         analytics_log_file = open(analytics_log_file_location, 'a')
         print(f"Paulos Ab: {'Analysis'.rjust(12)}\n")
@@ -213,8 +221,8 @@ def main(param):
                 except KeyboardInterrupt as e:
                     print('Paulos Ab: Analysis interrupted!')
         else:
-            run(" ".join(param[2:]))
+            run(" ".join(param[1:]))
 
     except KeyboardInterrupt as e:
         print('Paulos Ab: Analysis interrupted!')
-    # print(param)
+    
