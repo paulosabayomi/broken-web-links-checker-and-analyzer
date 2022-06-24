@@ -1,5 +1,5 @@
 # Broken web links Checker and Analyzer
-Python file for checking for broken links and analyzing links status on a single webpage   
+Python script for checking for broken links and analyzing links status on a single webpage   
 or all webpages of a website   
    
 it also has the support of using XML sitemap of a website to check for the broken links and analyze links in all webpages of the website   
