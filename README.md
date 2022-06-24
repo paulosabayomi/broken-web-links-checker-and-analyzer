@@ -8,14 +8,14 @@ it also has the support of using XML sitemap of a website to check for the broke
 `requests` and `BeautifulSoup4`   
 
 ### How to install `requests`   
-```
+```cmd
 pip install requests
-```cmd  
+```   
    
 ### How to install `BeautifulSoup4`   
-```
+```cmd
 pip install beautifulsoup4
-```cmd   
+```    
    
 ## How to run   
 it works through the command line and you pass data to it through the python sys module using `sys.argv` the you pass the data from `sys.argv` to the `main()`   
