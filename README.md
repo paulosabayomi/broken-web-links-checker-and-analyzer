@@ -9,13 +9,13 @@ it works through the command line and you pass data to it through the python sys
 function   
    
 ## Command format   
--- Single webpage
+-- Single webpage   
 `the-python-file-name full-url`   
    
--- With sitemap for a full website scan
+-- With sitemap for a full website scan   
 `the-python-file-name --with-sitemap full-url`   
 the `--with-sitemap` flag doesn't have to come before the url, it can also come after it   
    
 you can also call the python file with a custom name like npm, git, composer and so on, you can watch my yt video on how to do it, link below   
-`https://youtu.be/3VOtRaopsIQ`[How to run python file with custom name like npm on Windows and Linux]
+[https://youtu.be/3VOtRaopsIQ]
 
