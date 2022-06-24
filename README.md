@@ -18,8 +18,7 @@ pip install beautifulsoup4
 ```    
    
 ## How to run   
-it works through the command line and you pass data to it through the python sys module using `sys.argv` the you pass the data from `sys.argv` to the `main()`   
-function   
+it works through the command line and you pass data to it through the python sys module using `sys.argv` then pass the data from `sys.argv` to the `main()` function as parameter   
    
 ## Command format   
 -- Single webpage   
