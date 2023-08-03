@@ -5,7 +5,7 @@ or all webpages of a website
 it also has the support of using XML sitemap of a website to check for the broken links and analyze links in all webpages of the website   
    
 ## Dependencies   
-`requests` and `BeautifulSoup4`   
+`requests`, `BeautifulSoup4` and `lxml`   
 
 ### How to install `requests`   
 ```cmd
@@ -15,6 +15,11 @@ pip install requests
 ### How to install `BeautifulSoup4`   
 ```cmd
 pip install beautifulsoup4
+```    
+   
+### How to install `Lxml`   
+```cmd
+pip install lxml
 ```    
 if you get error running `pip` try using `pip3` instead
 ## How to run   

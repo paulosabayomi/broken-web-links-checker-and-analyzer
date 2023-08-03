@@ -211,7 +211,7 @@ def main(param):
             print(f"Paulos Ab: {'Fetching ' + link_to_xml_sitemap + '...'.rjust(12)}")
             with open(link_to_xml_sitemap, 'r') as sitemap:
                 xml_sitemap = " ".join(sitemap.readlines())
-                soup = BeautifulSoup(xml_sitemap, features="xml")
+                soup = BeautifulSoup(xml_sitemap, features="lxml-xml")
                 links = soup.find_all('loc')
                 print(f"Paulos Ab: {'Fetched ' + link_to_xml_sitemap + '!'.rjust(12)}\n")
                 print(f"Paulos Ab: Total Links: {len(links)} {'Analyzing Sitemap '.rjust(12) + link_to_xml_sitemap + '...'}\n")
