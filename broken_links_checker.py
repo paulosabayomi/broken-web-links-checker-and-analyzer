@@ -205,7 +205,7 @@ def main(param):
     try:
         if '--with-sitemap' in param:
             param.remove('--with-sitemap')
-            link_to_xml_sitemap = "".join(param[2:])
+            link_to_xml_sitemap = "".join(param[1:])
             if link_to_xml_sitemap.startswith('http'):
                 return print('Paulos Ab: Please provide a valid link to your xml sitemap!')
             print(f"Paulos Ab: {'Fetching ' + link_to_xml_sitemap + '...'.rjust(12)}")
@@ -228,5 +228,6 @@ def main(param):
         print('Paulos Ab: Analysis interrupted!')
 
 
-# main(sys.argv) # uncomment to run
+if __name__ == '__main__':
+    main(sys.argv)
     
