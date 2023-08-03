@@ -16,7 +16,7 @@ pip install requests
 ```cmd
 pip install beautifulsoup4
 ```    
-   
+if you get error running `pip` try using `pip3` instead
 ## How to run   
 it works through the command line and you pass data to it through the python sys module using `sys.argv` then pass the data from `sys.argv` to the `main()` function as parameter   
 
