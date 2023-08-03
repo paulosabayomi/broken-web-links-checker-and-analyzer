@@ -39,12 +39,13 @@ links_checker_main(sys.argv)
 ### Single webpage   
 #### On Windows
 ```cmd
-broken_links_checker https://full-url or http://full-url
+broken_links_checker https://full-url
 ```
 #### On Unix system
 ```cmd
-python3 broken_links_checker.py https://full-url or http://full-url
+python3 broken_links_checker.py https://full-url
 ```
+it doesn't have to be `https` can also be `http`
    
 ### With sitemap for a full website scan   
 #### On Windows
