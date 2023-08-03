@@ -29,7 +29,7 @@ main(sys.argv)
 
 ### as an import into another python module
 ```py
-from <the links checker python file> import main as links_checker_main # or any other name
+from broken_links_checker import main as links_checker_main # or any other name
 import sys
 # ...
 links_checker_main(sys.argv)
