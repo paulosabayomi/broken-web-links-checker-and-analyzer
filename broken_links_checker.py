@@ -6,7 +6,7 @@
 # Github: Amusa-Paulos
 # Twitter: @paulos_ab
 
-import requests, os, re, random
+import requests, os, re, random, sys
 from bs4 import BeautifulSoup
 
 def run(url, sitemap=False):
@@ -190,7 +190,8 @@ def run(url, sitemap=False):
             print(f"{'*'*25}\n")
     except KeyboardInterrupt as e:
         print('Paulos Ab: Analysis interrupted!')
-    general_file.close()
+    if sitemap:
+        general_file.close()
 
 def remove_duplicate_links(links):
     set_links = set()
@@ -225,4 +226,7 @@ def main(param):
 
     except KeyboardInterrupt as e:
         print('Paulos Ab: Analysis interrupted!')
+
+
+main(sys.argv)
     

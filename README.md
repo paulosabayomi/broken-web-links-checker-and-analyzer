@@ -19,6 +19,21 @@ pip install beautifulsoup4
    
 ## How to run   
 it works through the command line and you pass data to it through the python sys module using `sys.argv` then pass the data from `sys.argv` to the `main()` function as parameter   
+
+### in the python file   
+```py
+import sys
+# ...
+main(sys.argv)
+```
+
+### as an import into another python module
+```py
+from <the links checker python file> import main as links_checker_main # or any other name
+import sys
+# ...
+links_checker_main(sys.argv)
+```
    
 ## Command format   
 -- Single webpage   
