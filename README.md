@@ -36,22 +36,22 @@ links_checker_main(sys.argv)
 ```
    
 ## Command format   
--- Single webpage   
-### On Windows
+### Single webpage   
+#### On Windows
 ```cmd
 broken_links_checker https://full-url or http://full-url
 ```
-### On Unix system
+#### On Unix system
 ```cmd
 python3 broken_links_checker https://full-url or http://full-url
 ```
    
--- With sitemap for a full website scan   
-### On Windows
+### With sitemap for a full website scan   
+#### On Windows
 ```cmd
 broken_links_checker --with-sitemap C:/full/path/to/the/sitemap.xml
 ```
-### On Unix system
+#### On Unix system
 ```cmd
 python3 broken_links_checker --with-sitemap /full/path/to/the/sitemap.xml
 ```
