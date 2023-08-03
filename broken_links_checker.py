@@ -228,5 +228,5 @@ def main(param):
         print('Paulos Ab: Analysis interrupted!')
 
 
-main(sys.argv)
+# main(sys.argv) # uncomment to run
     
