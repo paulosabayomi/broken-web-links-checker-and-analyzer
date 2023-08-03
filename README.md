@@ -37,10 +37,24 @@ links_checker_main(sys.argv)
    
 ## Command format   
 -- Single webpage   
-`the-python-file-name full-url`   
+### On Windows
+```cmd
+broken_links_checker https://full-url or http://full-url
+```
+### On Unix system
+```cmd
+python3 broken_links_checker https://full-url or http://full-url
+```
    
 -- With sitemap for a full website scan   
-`the-python-file-name --with-sitemap full/url/to/the/sitemap.xml`   
+### On Windows
+```cmd
+broken_links_checker --with-sitemap C:/full/path/to/the/sitemap.xml
+```
+### On Unix system
+```cmd
+python3 broken_links_checker --with-sitemap /full/path/to/the/sitemap.xml
+```
 the `--with-sitemap` flag doesn't have to come before the url, it can also come after it   
    
 you can also call the python file with a custom name like names like npm, git, composer and so on, you can watch my yt video on how to do it, link below   
