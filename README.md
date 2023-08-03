@@ -16,7 +16,7 @@ pip install requests
 ```cmd
 pip install beautifulsoup4
 ```    
-   
+if you get error running `pip` try using `pip3` instead
 ## How to run   
 it works through the command line and you pass data to it through the python sys module using `sys.argv` then pass the data from `sys.argv` to the `main()` function as parameter   
 
@@ -36,11 +36,26 @@ links_checker_main(sys.argv)
 ```
    
 ## Command format   
--- Single webpage   
-`the-python-file-name full-url`   
+### Single webpage   
+#### On Windows
+```cmd
+broken_links_checker https://full-url
+```
+#### On Unix system
+```cmd
+python3 broken_links_checker.py https://full-url
+```
+it doesn't have to be `https` can also be `http`
    
--- With sitemap for a full website scan   
-`the-python-file-name --with-sitemap full/url/to/the/sitemap.xml`   
+### With sitemap for a full website scan   
+#### On Windows
+```cmd
+broken_links_checker --with-sitemap C:/full/path/to/the/sitemap.xml
+```
+#### On Unix system
+```cmd
+python3 broken_links_checker.py --with-sitemap /full/path/to/the/sitemap.xml
+```
 the `--with-sitemap` flag doesn't have to come before the url, it can also come after it   
    
 you can also call the python file with a custom name like names like npm, git, composer and so on, you can watch my yt video on how to do it, link below   
