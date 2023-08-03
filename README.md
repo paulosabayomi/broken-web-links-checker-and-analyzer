@@ -43,7 +43,7 @@ broken_links_checker https://full-url or http://full-url
 ```
 #### On Unix system
 ```cmd
-python3 broken_links_checker https://full-url or http://full-url
+python3 broken_links_checker.py https://full-url or http://full-url
 ```
    
 ### With sitemap for a full website scan   
@@ -53,7 +53,7 @@ broken_links_checker --with-sitemap C:/full/path/to/the/sitemap.xml
 ```
 #### On Unix system
 ```cmd
-python3 broken_links_checker --with-sitemap /full/path/to/the/sitemap.xml
+python3 broken_links_checker.py --with-sitemap /full/path/to/the/sitemap.xml
 ```
 the `--with-sitemap` flag doesn't have to come before the url, it can also come after it   
    
